@@ -1,0 +1,120 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: m01
+  labels:
+    network: easy
+    name: m01
+spec:
+  hostname: m01 
+  subdomain: easy 
+  containers:
+      - name: easy-sshd-ubuntu-1604
+        image: wonkywumpus/easy-sshd-ubuntu-1604:0.10
+        ports:
+        - containerPort: 22
+        volumeMounts:
+        - name: easy-keys
+          mountPath: /root/.secret-easy-keys
+          readOnly: true
+  volumes:
+      - name: easy-keys
+        secret:
+          secretName: easy-keys
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: m02
+  labels:
+    network: easy
+    name: m02
+spec:
+  hostname: m02 
+  subdomain: easy 
+  containers:
+      - name: easy-sshd-ubuntu-1604
+        image: wonkywumpus/easy-sshd-ubuntu-1604:0.10
+        ports:
+        - containerPort: 22
+        volumeMounts:
+        - name: easy-keys
+          mountPath: /root/.secret-easy-keys
+          readOnly: true
+  volumes:
+      - name: easy-keys
+        secret:
+          secretName: easy-keys
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: m03
+  labels:
+    network: easy
+    name: m03
+spec:
+  hostname: m03 
+  subdomain: easy 
+  containers:
+      - name: easy-sshd-ubuntu-1604
+        image: wonkywumpus/easy-sshd-ubuntu-1604:0.10
+        ports:
+        - containerPort: 22
+        volumeMounts:
+        - name: easy-keys
+          mountPath: /root/.secret-easy-keys
+          readOnly: true
+  volumes:
+      - name: easy-keys
+        secret:
+          secretName: easy-keys
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: m04
+  labels:
+    network: easy
+    name: m04
+spec:
+  hostname: m04 
+  subdomain: easy 
+  containers:
+      - name: easy-sshd-ubuntu-1604
+        image: wonkywumpus/easy-sshd-ubuntu-1604:0.10
+        ports:
+        - containerPort: 22
+        volumeMounts:
+        - name: easy-keys
+          mountPath: /root/.secret-easy-keys
+          readOnly: true
+  volumes:
+      - name: easy-keys
+        secret:
+          secretName: easy-keys
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: m05
+  labels:
+    network: easy
+    name: m05
+spec:
+  hostname: m05 
+  subdomain: easy 
+  containers:
+      - name: easy-sshd-ubuntu-1604
+        image: wonkywumpus/easy-sshd-ubuntu-1604:0.10
+        ports:
+        - containerPort: 22
+        volumeMounts:
+        - name: easy-keys
+          mountPath: /root/.secret-easy-keys
+          readOnly: true
+  volumes:
+      - name: easy-keys
+        secret:
+          secretName: easy-keys
+---

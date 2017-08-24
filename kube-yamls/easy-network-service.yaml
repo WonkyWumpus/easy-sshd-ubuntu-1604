@@ -13,6 +13,6 @@ spec:
     network: easy
   clusterIP: None
   ports:
-    - name: Junk # Actually, no port is needed.
+    - name: dummy-name # Real definiation not required for headless service
       port: 1234
       targetPort: 1234
