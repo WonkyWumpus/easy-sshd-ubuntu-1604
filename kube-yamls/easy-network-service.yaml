@@ -7,7 +7,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: easy-network
+  name: easy
 spec:
   selector:
     network: easy
