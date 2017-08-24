@@ -1,0 +1,18 @@
+#
+# Headless service
+# 
+# Pods created with a subdomain of easy will attach to this service
+# and kubernetes DNS entries will be created for them
+#
+apiVersion: v1
+kind: Service
+metadata:
+  name: easy-network
+spec:
+  selector:
+    network: easy
+  clusterIP: None
+  ports:
+    - name: Junk # Actually, no port is needed.
+      port: 1234
+      targetPort: 1234
