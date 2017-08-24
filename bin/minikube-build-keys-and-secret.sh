@@ -19,6 +19,7 @@ then
   minikube ssh "docker run wonkywumpus/ssh-keygen-ubuntu-1604:v0.10 | tee >(head -n 1 > /home/docker/.ssh/easy-key.pub)|tail -n +2>/home/docker/.ssh/easy-key"
   minikube ssh ' (cat /home/docker/.ssh/easy-key.pub )'  > $HOME/easy-keys/easy-key.pub
   minikube ssh ' (cat /home/docker/.ssh/easy-key) '  > $HOME/easy-keys/easy-key
+  minikube ssh 'chmod 600 /home/docker/.ssh/easy-key'
   kubectl delete secret easy-keys
   kubectl create secret generic easy-keys --from-file=$HOME/easy-keys
   echo "Complete"
