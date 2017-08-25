@@ -16,7 +16,7 @@ then
   mkdir -p $HOME/easy-keys
   eval $(minikube docker-env)
   minikube ssh "mkdir -p .ssh"
-  minikube ssh "docker run wonkywumpus/ssh-keygen-ubuntu-1604:v0.10 | tee >(head -n 1 > /home/docker/.ssh/easy-key.pub)|tail -n +2>/home/docker/.ssh/easy-key"
+  minikube ssh "docker run wonkywumpus/keygen-ubuntu-1604:0.10 | tee >(head -n 1 > /home/docker/.ssh/easy-key.pub)|tail -n +2>/home/docker/.ssh/easy-key"
   minikube ssh ' (cat /home/docker/.ssh/easy-key.pub )'  > $HOME/easy-keys/easy-key.pub
   minikube ssh ' (cat /home/docker/.ssh/easy-key) '  > $HOME/easy-keys/easy-key
   minikube ssh 'chmod 600 /home/docker/.ssh/easy-key'
