@@ -24,7 +24,7 @@ The dockerfile for the Ubuntu images performs several steps at startup
 2. Make changes to resolv.conf and .ssh/config to ease shortname resolution and key usage for ssh
 3. Launchs sshd
 
-It is important to note that your pods must define their subdomain is easy and they must mount the key pair secret into /root/.secret-easy-keys.  Sample .yaml files are provided.
+It is important to note that your pods must define their subdomain as easy and they must mount the key pair secret into /root/.secret-easy-keys.  Sample .yaml files are provided.
 
 
 ## Instructions
@@ -50,6 +50,10 @@ You are up and running.  Test that you can connect from your minikube VM into th
 `ssh -i .ssh/easy-key root@<ip address returned from above command>`
 
 `ssh root@m02`
+
+You can remove the 5 test containers you created and build your own containers using the yaml as a template.  You can keep using the existing easy service and the secret.
+
+`kubectl delete -f easy-sshd-ubuntu-1604/kube-yamls/easy-5-machines.yaml`
 
 
 ## Errata and Future Enhancements
