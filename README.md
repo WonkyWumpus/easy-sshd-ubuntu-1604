@@ -43,9 +43,9 @@ Next run the sample .yaml to create five containers
 
 You are up and running.  Test that you can connect from your minikube VM into the machines and between machines in the cluster.  From the minikube VM you will need to discover the IP of one of the machines and to pass the identify file manually.  Once inside a container on the cluster shortnames will work and the correct key will get passed automatically
 
-`minikube ssh`
-
 `kubectl describe pod m01|grep IP`
+
+`minikube ssh`
 
 `ssh -i .ssh/easy-key root@<ip address returned from above command>`
 
