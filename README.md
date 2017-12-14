@@ -55,6 +55,9 @@ You can remove the 5 test containers you created and build your own containers u
 
 `kubectl delete -f easy-sshd-ubuntu-1604/kube-yamls/easy-5-machines.yaml`
 
+## Issues, Comments and Suggestions
+
+Please use the github Issue feature to provide any and all feedback.
 
 ## Errata and Future Enhancements
 
@@ -62,5 +65,6 @@ You can remove the 5 test containers you created and build your own containers u
 2. minikube-build-keys-and-secret.bat for windows hosts
 3. Avoid need to find IPs from minibue VM (maybe proper service defs and similar shortname configs inside VM itself). Maybe as a single jumpserver into the cluster.
 4. sshd setup and a some other info gleaned for other repos.  Should add credit/attribution.
+5. **Lots** of additional work and refacotring possible.
 
 
