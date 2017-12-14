@@ -61,5 +61,6 @@ You can remove the 5 test containers you created and build your own containers u
 1. Version of minikube-build-keys-and-secret.sh work with all Kubernetes environments, not just minikube
 2. minikube-build-keys-and-secret.bat for windows hosts
 3. Avoid need to find IPs from minibue VM (maybe proper service defs and similar shortname configs inside VM itself). Maybe as a single jumpserver into the cluster.
+4. sshd setup and a some other info gleaned for other repos.  Should add credit/attribution.
 
 
