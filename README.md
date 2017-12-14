@@ -57,7 +57,7 @@ You can remove the 5 test containers you created and build your own containers u
 
 ## Issues, Comments and Suggestions
 
-Please use the github Issue feature to provide any and all feedback.
+Please use the github issue feature to provide any and all feedback.
 
 ## Errata and Future Enhancements
 
